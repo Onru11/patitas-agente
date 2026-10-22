@@ -1,0 +1,14 @@
+# Despliegue de Patitaspe en Netlify: web estática + API.
+# Publica solo la carpeta dist/ (la arma scripts/preparar-deploy.sh), así no se suben los .md, .gs ni respaldos.
+[build]
+  command = "node scripts/sincronizar-datos.js && bash scripts/preparar-deploy.sh"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200

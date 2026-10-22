@@ -1,0 +1,7 @@
+.env
+dist/
+.DS_Store
+__pycache__/
+agente/citas_pendientes.jsonl
+index.respaldo-*.html
+*.gs

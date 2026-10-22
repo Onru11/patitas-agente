@@ -1,0 +1,508 @@
+{
+  "_info": "Fuente única de datos de Patitaspe. Edita aquí y corre: node scripts/sincronizar-datos.js",
+  "actualizado": "2026-10-21",
+  "servicios": [
+    {
+      "id": "consulta",
+      "ic": "🩺",
+      "nm": "Consulta general",
+      "perro": {
+        "peq": [
+          50,
+          90
+        ],
+        "med": [
+          60,
+          100
+        ],
+        "gra": [
+          70,
+          110
+        ]
+      },
+      "gato": [
+        50,
+        90
+      ]
+    },
+    {
+      "id": "vacunas",
+      "ic": "💉",
+      "nm": "Vacunas (combo)",
+      "perro": {
+        "peq": [
+          40,
+          70
+        ],
+        "med": [
+          50,
+          80
+        ],
+        "gra": [
+          60,
+          90
+        ]
+      },
+      "gato": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "despar",
+      "ic": "🪱",
+      "nm": "Desparasitación",
+      "perro": {
+        "peq": [
+          20,
+          40
+        ],
+        "med": [
+          25,
+          45
+        ],
+        "gra": [
+          30,
+          50
+        ]
+      },
+      "gato": [
+        20,
+        40
+      ]
+    },
+    {
+      "id": "castra",
+      "ic": "✂️",
+      "nm": "Castración (macho)",
+      "perro": {
+        "peq": [
+          200,
+          400
+        ],
+        "med": [
+          300,
+          550
+        ],
+        "gra": [
+          400,
+          650
+        ]
+      },
+      "gato": [
+        180,
+        350
+      ]
+    },
+    {
+      "id": "esteril",
+      "ic": "✂️",
+      "nm": "Esterilización (hembra)",
+      "perro": {
+        "peq": [
+          350,
+          600
+        ],
+        "med": [
+          450,
+          750
+        ],
+        "gra": [
+          600,
+          950
+        ]
+      },
+      "gato": [
+        300,
+        550
+      ]
+    },
+    {
+      "id": "sangre",
+      "ic": "🩸",
+      "nm": "Análisis de sangre",
+      "perro": {
+        "peq": [
+          80,
+          150
+        ],
+        "med": [
+          90,
+          160
+        ],
+        "gra": [
+          100,
+          180
+        ]
+      },
+      "gato": [
+        80,
+        150
+      ]
+    },
+    {
+      "id": "rayos",
+      "ic": "🦴",
+      "nm": "Radiografía",
+      "perro": {
+        "peq": [
+          80,
+          130
+        ],
+        "med": [
+          90,
+          150
+        ],
+        "gra": [
+          100,
+          170
+        ]
+      },
+      "gato": [
+        80,
+        130
+      ]
+    },
+    {
+      "id": "eco",
+      "ic": "📡",
+      "nm": "Ecografía abdominal",
+      "perro": {
+        "peq": [
+          130,
+          200
+        ],
+        "med": [
+          140,
+          210
+        ],
+        "gra": [
+          150,
+          230
+        ]
+      },
+      "gato": [
+        130,
+        200
+      ]
+    },
+    {
+      "id": "hospi",
+      "ic": "🏥",
+      "nm": "Hospitalización (1 noche)",
+      "perro": {
+        "peq": [
+          120,
+          250
+        ],
+        "med": [
+          150,
+          300
+        ],
+        "gra": [
+          180,
+          350
+        ]
+      },
+      "gato": [
+        120,
+        250
+      ]
+    },
+    {
+      "id": "cirugia",
+      "ic": "⚕️",
+      "nm": "Cirugía general (media)",
+      "perro": {
+        "peq": [
+          700,
+          1500
+        ],
+        "med": [
+          900,
+          1800
+        ],
+        "gra": [
+          1100,
+          2200
+        ]
+      },
+      "gato": [
+        700,
+        1500
+      ]
+    },
+    {
+      "id": "dental",
+      "ic": "🦷",
+      "nm": "Limpieza dental",
+      "perro": {
+        "peq": [
+          150,
+          300
+        ],
+        "med": [
+          180,
+          350
+        ],
+        "gra": [
+          200,
+          400
+        ]
+      },
+      "gato": [
+        150,
+        280
+      ]
+    },
+    {
+      "id": "emerg",
+      "ic": "🚨",
+      "nm": "Recargo emergencia noche",
+      "perro": {
+        "peq": [
+          50,
+          100
+        ],
+        "med": [
+          60,
+          120
+        ],
+        "gra": [
+          70,
+          140
+        ]
+      },
+      "gato": [
+        50,
+        100
+      ]
+    }
+  ],
+  "factor_zona": {
+    "norte": 0.85,
+    "sur": 0.85,
+    "centro": 1,
+    "este": 1
+  },
+  "sintomas": [
+    {
+      "id": "convul",
+      "t": "Convulsiones o temblores fuertes",
+      "lvl": "red"
+    },
+    {
+      "id": "respira",
+      "t": "Le cuesta respirar / respira agitado",
+      "lvl": "red"
+    },
+    {
+      "id": "encias",
+      "t": "Encías pálidas, blancas o azuladas",
+      "lvl": "red"
+    },
+    {
+      "id": "orina",
+      "t": "No puede orinar o lo intenta sin lograrlo",
+      "lvl": "red"
+    },
+    {
+      "id": "sangre",
+      "t": "Vómito o diarrea con sangre",
+      "lvl": "red"
+    },
+    {
+      "id": "toxico",
+      "t": "Comió algo tóxico (chocolate, veneno, xilitol)",
+      "lvl": "red"
+    },
+    {
+      "id": "barriga",
+      "t": "Barriga hinchada y dura / arcadas sin vomitar",
+      "lvl": "red"
+    },
+    {
+      "id": "golpe",
+      "t": "Lo atropellaron o sufrió un golpe fuerte o caída",
+      "lvl": "red"
+    },
+    {
+      "id": "colapso",
+      "t": "Se desmayó, colapsó o no se puede parar",
+      "lvl": "red"
+    },
+    {
+      "id": "sangrado",
+      "t": "Sangrado que no para",
+      "lvl": "red"
+    },
+    {
+      "id": "calor",
+      "t": "Jadeo extremo tras el calor / golpe de calor",
+      "lvl": "red"
+    },
+    {
+      "id": "vomito",
+      "t": "Vomitó 2–3 veces, sin sangre",
+      "lvl": "amber"
+    },
+    {
+      "id": "nocome",
+      "t": "No quiere comer hace más de 24 horas",
+      "lvl": "amber"
+    },
+    {
+      "id": "diarrea",
+      "t": "Diarrea sin sangre",
+      "lvl": "amber"
+    },
+    {
+      "id": "decaido",
+      "t": "Decaído o durmiendo más de lo normal",
+      "lvl": "amber"
+    },
+    {
+      "id": "cojea",
+      "t": "Cojea o le duele moverse",
+      "lvl": "amber"
+    },
+    {
+      "id": "agua",
+      "t": "Toma mucha más agua u orina de más, de golpe",
+      "lvl": "amber"
+    }
+  ],
+  "clinicas_24h": [
+    {
+      "n": "Clínica Veterinaria Gavet — Puente Piedra",
+      "z": "norte",
+      "dir": "Av. Puente Piedra 563, Puente Piedra",
+      "tel": "+51960814125",
+      "telDisp": "960 814 125",
+      "wa": "51960814125",
+      "maps": "Veterinaria Gavet, Av. Puente Piedra 563, Puente Piedra, Lima",
+      "conf": "Verificado en su web oficial"
+    },
+    {
+      "n": "Clínica Veterinaria Gavet — Carabayllo",
+      "z": "norte",
+      "dir": "Estación Terminal Chimpu Ocllo (Metropolitano), Carabayllo",
+      "tel": "+51913728054",
+      "telDisp": "913 728 054",
+      "wa": "51913728054",
+      "maps": "Veterinaria Gavet Chimpu Ocllo, Carabayllo, Lima",
+      "conf": "Verificado en su web oficial"
+    },
+    {
+      "n": "DR.VET — Comas",
+      "z": "norte",
+      "dir": "Av. Universitaria Norte 7402, Urb. El Retablo, Comas (frente a EsSalud)",
+      "tel": "+5115377382",
+      "telDisp": "(01) 537 7382",
+      "wa": "",
+      "maps": "Av. Universitaria Norte 7402, Comas, Lima",
+      "conf": "Fuente: su blog oficial — confirma el teléfono"
+    },
+    {
+      "n": "Vetivet",
+      "z": "centro",
+      "dir": "Av. Aviación 3001, San Borja",
+      "tel": "+5117488000",
+      "telDisp": "(01) 748 8000",
+      "wa": "51984148981",
+      "maps": "Vetivet, Av. Aviación 3001, San Borja, Lima",
+      "conf": "Verificado en su web oficial"
+    },
+    {
+      "n": "Clínica Veterinaria Rondón",
+      "z": "centro",
+      "dir": "Av. Pedro Venturo 104, Santiago de Surco",
+      "tel": "+5112084900",
+      "telDisp": "(01) 208 4900",
+      "wa": "51924679664",
+      "maps": "Veterinaria Rondón, Av. Pedro Venturo 104, Surco, Lima",
+      "conf": "Verificado en su web oficial"
+    },
+    {
+      "n": "Veterinaria Cavero",
+      "z": "centro",
+      "dir": "Av. Primavera 1780, Santiago de Surco",
+      "tel": "+5114355218",
+      "telDisp": "(01) 435 5218",
+      "wa": "",
+      "maps": "Veterinaria Cavero, Av. Primavera 1780, Surco, Lima",
+      "conf": "Verificado en su web oficial · especialistas en trauma y neuro"
+    },
+    {
+      "n": "Pet Time — Chorrillos",
+      "z": "sur",
+      "dir": "Av. Guardia Peruana 343, Chorrillos",
+      "tel": "+51993622898",
+      "telDisp": "993 622 898",
+      "wa": "51989979529",
+      "maps": "Pet Time Veterinaria Guardia Peruana, Chorrillos, Lima",
+      "conf": "Fuente: fichas y redes — confirma dirección y teléfono"
+    },
+    {
+      "n": "Hospital Veterinario Maskoteka",
+      "z": "este",
+      "dir": "Av. Gran Chimú 301, Zárate, San Juan de Lurigancho",
+      "tel": "+5114598694",
+      "telDisp": "(01) 459 8694",
+      "wa": "",
+      "maps": "Hospital Veterinario Maskoteka, Gran Chimú, Zárate, SJL, Lima",
+      "conf": "Fuente: fichas y redes — confirma el teléfono"
+    }
+  ],
+  "distritos": {
+    "_nota": "Aproximación de qué zona usa cada distrito para el factor de precio y el directorio 24h.",
+    "norte": [
+      "Ancón",
+      "Carabayllo",
+      "Comas",
+      "Independencia",
+      "Los Olivos",
+      "Puente Piedra",
+      "San Martín de Porres",
+      "Santa Rosa"
+    ],
+    "centro": [
+      "Barranco",
+      "Breña",
+      "Cercado de Lima",
+      "Jesús María",
+      "La Victoria",
+      "Lince",
+      "Magdalena del Mar",
+      "Miraflores",
+      "Pueblo Libre",
+      "Rímac",
+      "San Borja",
+      "San Isidro",
+      "San Miguel",
+      "Santiago de Surco",
+      "Surquillo"
+    ],
+    "sur": [
+      "Chorrillos",
+      "Lurín",
+      "Pachacámac",
+      "Punta Hermosa",
+      "San Bartolo",
+      "San Juan de Miraflores",
+      "Villa El Salvador",
+      "Villa María del Triunfo"
+    ],
+    "este": [
+      "Ate",
+      "Chaclacayo",
+      "Cieneguilla",
+      "El Agustino",
+      "La Molina",
+      "Lurigancho-Chosica",
+      "San Juan de Lurigancho",
+      "San Luis",
+      "Santa Anita"
+    ]
+  }
+}
