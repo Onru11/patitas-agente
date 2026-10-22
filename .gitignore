@@ -5,3 +5,4 @@ __pycache__/
 agente/citas_pendientes.jsonl
 index.respaldo-*.html
 *.gs
+agente/PEGA-AQUI-TU-CLAVE.txt

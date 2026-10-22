@@ -1,0 +1,93 @@
+
+══════════════════════════════════════════════════════════════════════
+1. Consulta de precio
+══════════════════════════════════════════════════════════════════════
+
+👤 Cliente: hola! cuánto me cuesta castrar a mi gato en Surco?
+   ⚙️  consultar_precio({"especie": "gato", "servicio": "castra", "distrito": "Surco"}) → {"ok": true, "especie": "gato", "tamano": null, "zona": "Lima Centro", "items": [{"id": "castra", "servicio": "Castración (macho)", "min": 180, "max": 350, "mon…
+
+🐾 Pati: ¡Hola! 🐱 Castrar a un gato macho en Surco cuesta entre **S/ 180 y S/ 350**.
+
+Es un rango de referencia de clínicas privadas en Lima. No es el tarifario de una clínica en particular, así que el precio final depende de cada lugar.
+
+¿Quieres que te ayude a agendar una cita para evaluarlo?
+
+👤 Cliente: y si en una vet me cobran 500 soles, es mucho?
+   ⚙️  verificar_presupuesto({"servicio": "castra", "monto": 500, "especie": "gato", "distrito": "Surco"}) → {"ok": true, "servicio": "Castración (macho)", "monto": 500, "rango": [180, 350], "zona": "Lima Centro", "veredicto": "caro", "detalle": "Un 43% por encima del …
+
+🐾 Pati: Sí, S/ 500 es caro. 😕 Está como 43% por encima del máximo de referencia (S/ 350) para castrar un gato macho en Surco.
+
+Te recomiendo:
+- Pedir el detalle por escrito de qué incluye (examen previo, anestesia, medicinas, control).
+- Cotizar en una o dos clínicas más.
+
+A veces el precio sube si incluyen exámenes de sangre o algo extra. Si es así, es válido, pero conviene que te lo expliquen.
+
+¿Te ayudo a agendar una cita en Patitaspe?
+
+══════════════════════════════════════════════════════════════════════
+2. Emergencia de noche
+══════════════════════════════════════════════════════════════════════
+
+👤 Cliente: mi perro se comió una barra de chocolate y está temblando mucho, qué hago?? estoy en Chorrillos
+   ⚙️  evaluar_urgencia({"especie": "perro", "sintomas": ["toxico"]}) → {"ok": true, "especie": "perro", "nivel": "rojo", "accion": "Emergencia: llamar ahora a una clínica 24h e ir de inmediato. No esperar a mañana.", "aviso_especia…
+   ⚙️  buscar_clinicas_24h({"distrito": "Chorrillos", "zona": "sur"}) → {"ok": true, "zona": "Lima Sur", "clinicas": [{"nombre": "Pet Time — Chorrillos", "zona": "Lima Sur", "direccion": "Av. Guardia Peruana 343, Chorrillos", "telef…
+
+🐾 Pati: 🚨 Esto es una emergencia. Lleva a tu perro **ahora mismo** a una clínica 24h. No esperes a mañana.
+
+**Pet Time — Chorrillos**
+📍 Av. Guardia Peruana 343, Chorrillos
+📞 993 622 898
+💬 WhatsApp: 51989979529
+
+Llama de camino para confirmar que te atienden y avisa que se comió chocolate y está temblando.
+
+Mientras vas:
+- Lleva el envoltorio de la barra, o anota cuánta comió y de qué tipo era.
+- No le des nada para que vomite ni ningún remedio casero. Eso lo decide el veterinario.
+- Llévalo con calma y evita que se agite.
+
+Yo no puedo diagnosticarlo ni recetarle nada, pero el temblor con chocolate necesita atención inmediata. 🙏
+
+¿Puedes ir ya? Avísame si necesitas algo más.
+
+══════════════════════════════════════════════════════════════════════
+3. Agendar una cita
+══════════════════════════════════════════════════════════════════════
+
+👤 Cliente: mi perrita Luna tiene diarrea desde ayer pero está comiendo normal
+   ⚙️  evaluar_urgencia({"especie": "perro", "sintomas": ["diarrea"]}) → {"ok": true, "especie": "perro", "nivel": "ambar", "accion": "No parece de vida o muerte, pero hay que llamar hoy al veterinario y vigilar de cerca.", "aviso_es…
+
+🐾 Pati: Qué pena por Luna 🐶. Que siga comiendo normal es buena señal. Aun así, te recomiendo que la vea un veterinario hoy o mañana a primera hora.
+
+Ya es tarde, así que atendemos de lunes a sábado de 9:00 a 19:00. ¿Quieres que te agende una cita para mañana?
+
+Mientras tanto, vigílala. Si notas sangre en las heces, vómitos, decaimiento o que deja de comer, ve de inmediato a una clínica 24h. Dime y te busco una cerca.
+
+Para la cita necesito:
+- Tu nombre y teléfono
+- Tamaño de Luna (pequeña, mediana o grande)
+- Hora que prefieras mañana
+
+👤 Cliente: sí, quiero una cita para mañana a las 10am. Soy Eduardo, mi cel es 987 569 409
+
+🐾 Pati: Gracias, Eduardo. Confirmo los datos antes de agendar:
+
+- Cliente: Eduardo
+- Teléfono: 987 569 409
+- Mascota: Luna (perra)
+- Motivo: diarrea desde ayer, come normal
+- Día y hora: jueves 22 de octubre, 10:00 a.m.
+
+¿Está todo bien? Respóndeme "sí" y la agendo.
+
+👤 Cliente: sí, confirma
+   ⚙️  agendar_cita({"nombre_cliente": "Eduardo", "telefono": "987569409", "nombre_mascota": "Luna", "especie": "perro", "motivo": "Diarrea desde ayer, come normal", "fecha_hora": "2026-10-22T10:00"}) → {"ok": true, "estado": "solicitud_registrada", "nota": "Calendario no conectado: la solicitud quedó registrada y el equipo la confirmará por WhatsApp."}…
+
+🐾 Pati: Listo, Eduardo. Registré tu solicitud para Luna el jueves 22 de octubre a las 10:00 a.m.
+
+Todavía no está confirmada. El calendario no está conectado ahora mismo, así que el equipo te escribirá por WhatsApp al 987 569 409 para confirmarla.
+
+Esta noche vigila a Luna. Dale agua fresca y revisa que no tenga sangre en las heces, vómitos ni decaimiento. Si pasa algo de eso, ve a una clínica 24h y yo te ayudo a ubicar una.
+
+¿Te ayudo con algo más? 🐾
